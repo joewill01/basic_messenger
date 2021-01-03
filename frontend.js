@@ -2,7 +2,7 @@ $(function () {
   // if user is running mozilla then use it's built-in WebSocket
   window.WebSocket = window.WebSocket || window.MozWebSocket;
 
-  var connection = new WebSocket('wss://bubl-messaging-app.herokuapp.com/');
+  var connection = new WebSocket('ws://bubl-messaging-app.herokuapp.com/');
 
   connection.onopen = function () {
     // connection is opened and ready to use
@@ -49,7 +49,7 @@ $(function () {
     return;
   }
   // open connection
-  var connection = new WebSocket('wss://bubl-messaging-app.herokuapp.com/');
+  var connection = new WebSocket('ws://bubl-messaging-app.herokuapp.com/');
   connection.onopen = function () {
     // first we want users to enter their names
     input.removeAttr('disabled');
